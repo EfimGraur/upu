@@ -49,7 +49,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 		return authList;
 	}
 	
-	public List<String> getRoles(Integer role) {
+	private List<String> getRoles(Integer role) {
 
 		List<String> roles = new ArrayList<String>();
 
@@ -62,7 +62,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 		return roles;
 	}
 	
-	public static List<GrantedAuthority> getGrantedAuthorities(List<String> roles) {
+	private List<GrantedAuthority> getGrantedAuthorities(List<String> roles) {
 		List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
 		
 		for (String role : roles) {
