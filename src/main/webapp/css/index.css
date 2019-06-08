@@ -18,6 +18,9 @@ body{
 #form_wrapper {
     margin: 0 auto;
 }
+#submitButton{
+    width: 100%;
+}
 
 
 
