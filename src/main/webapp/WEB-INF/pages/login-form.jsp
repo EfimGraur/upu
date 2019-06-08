@@ -13,6 +13,7 @@
 <title>Login page</title>
 </head>
 <body>
+<div id="loginWrapper">
 <h1>UPU User</h1>
 
 <p>
@@ -36,5 +37,6 @@
 </tbody>
 </table>
 </form>
+</div>
 </body>
 </html>
