@@ -1,6 +1,7 @@
 package com.sprsec.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="users")
@@ -14,12 +15,8 @@ public class User {
 	
 	private String password;
 	
-	@OneToOne(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinTable(name="user_roles",
-		joinColumns = {@JoinColumn(name="user_id", referencedColumnName="id")},
-		inverseJoinColumns = {@JoinColumn(name="role_id", referencedColumnName="id")}
-	)
-	private Role role;
+	@OneToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "user")
+	private List<Role> role;
 
 	public Integer getId() {
 		return id;
@@ -45,11 +42,11 @@ public class User {
 		this.password = password;
 	}
 
-	public Role getRole() {
+	public List<Role> getRole() {
 		return role;
 	}
 
-	public void setRole(Role role) {
+	public void setRole(List<Role> role) {
 		this.role = role;
 	}	
 

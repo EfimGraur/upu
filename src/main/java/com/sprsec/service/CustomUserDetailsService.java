@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import com.sprsec.model.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -40,33 +41,15 @@ public class CustomUserDetailsService implements UserDetailsService {
 				accountNonExpired, 
 				credentialsNonExpired, 
 				accountNonLocked,
-				getAuthorities(domainUser.getRole().getId())
+				getGrantedAuthorities(domainUser.getRole())
 		);
 	}
 	
-	public Collection<? extends GrantedAuthority> getAuthorities(Integer role) {
-		List<GrantedAuthority> authList = getGrantedAuthorities(getRoles(role));
-		return authList;
-	}
-	
-	private List<String> getRoles(Integer role) {
-
-		List<String> roles = new ArrayList<String>();
-
-		if (role.intValue() == 1) {
-			roles.add("ROLE_MODERATOR");
-			roles.add("ROLE_ADMIN");
-		} else if (role.intValue() == 2) {
-			roles.add("ROLE_MODERATOR");
-		}
-		return roles;
-	}
-	
-	private List<GrantedAuthority> getGrantedAuthorities(List<String> roles) {
+	private List<GrantedAuthority> getGrantedAuthorities(List<Role> roles) {
 		List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
 		
-		for (String role : roles) {
-			authorities.add(new SimpleGrantedAuthority(role));
+		for (Role role : roles) {
+			authorities.add(new SimpleGrantedAuthority("ROLE_"+role.getRole()));
 		}
 		return authorities;
 	}

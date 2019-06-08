@@ -12,7 +12,7 @@
 		<intercept-url pattern="/admin/*" access="ROLE_ADMIN" />
 		
 		<form-login login-page="/user-login.html" 
-			default-target-url="/success-login.html"
+			default-target-url="/home.html"
 			authentication-failure-url="/error-login.html" />
 		<logout logout-success-url="/index.html" />
 		
@@ -23,5 +23,7 @@
 			<password-encoder hash="plaintext" />
 		</authentication-provider>
 	</authentication-manager>
-	
+
+    <beans:bean id="webexpressionHandler" class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler" />
+
 </beans:beans>

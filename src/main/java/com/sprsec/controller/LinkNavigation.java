@@ -10,12 +10,12 @@ public class LinkNavigation {
 	
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public ModelAndView homePage() {
-		return new ModelAndView("home");
+		return new ModelAndView("login-form");
 	}
 	
 	@RequestMapping(value="/index", method=RequestMethod.GET)
 	public ModelAndView indexPage() {
-		return new ModelAndView("home");
+		return new ModelAndView("login-form");
 	}
 	
 	@RequestMapping(value="/sec/moderation", method=RequestMethod.GET)
@@ -36,6 +36,11 @@ public class LinkNavigation {
 	@RequestMapping(value="/admin/pacient-form", method=RequestMethod.GET)
 	public ModelAndView pacientForm() {
 		return new ModelAndView("pacient-form");
+	}
+
+	@RequestMapping(value="/home", method=RequestMethod.GET)
+	public ModelAndView home() {
+		return new ModelAndView("home");
 	}
 
 }

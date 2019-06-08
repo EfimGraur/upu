@@ -14,7 +14,11 @@ public class Role {
 	
 	private String role;
 	
-	@OneToOne(cascade=CascadeType.ALL, mappedBy = "role")
+	@ManyToOne(cascade=CascadeType.ALL)
+	@JoinTable(name="user_roles",
+			 joinColumns = {@JoinColumn(name="user_id", referencedColumnName = "id")},
+	inverseJoinColumns = {@JoinColumn(name="role_id", referencedColumnName = "id")}
+	)
 	private User user;
 
 	public Integer getId() {
