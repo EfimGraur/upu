@@ -33,4 +33,9 @@ public class LinkNavigation {
 		return new ModelAndView("admin-second");
 	}
 
+	@RequestMapping(value="/admin/pacient-form", method=RequestMethod.GET)
+	public ModelAndView pacientForm() {
+		return new ModelAndView("pacient-form");
+	}
+
 }

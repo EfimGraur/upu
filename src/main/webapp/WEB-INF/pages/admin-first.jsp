@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>First Admin page</h1>
-<p><a href="${pageContext.request.contextPath}/pacient-form.html">Pacient Form</a><br/>
+<p><a href="${pageContext.request.contextPath}/admin/pacient-form.html">Pacient Form</a><br/>
 <a href="<c:url value="/j_spring_security_logout" />" >Logout</a> <br/>
 <a href="${pageContext.request.contextPath}/index.html">Home page</a><br/>
 </p>
