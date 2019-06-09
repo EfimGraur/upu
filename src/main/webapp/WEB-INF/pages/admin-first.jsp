@@ -8,13 +8,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>First Admin page</title>
+<title>Registratura medicala</title>
 </head>
 <body>
-<h1>First Admin page</h1>
+<h1>Registratura medicala</h1>
 <p><a href="${pageContext.request.contextPath}/admin/firstLevelForm.htmp">Pacient Form</a><br/>
 <a href="<c:url value="/j_spring_security_logout" />" >Logout</a> <br/>
-<a href="${pageContext.request.contextPath}/index.html">Home page</a><br/>
 </p>
 </body>
 </html>

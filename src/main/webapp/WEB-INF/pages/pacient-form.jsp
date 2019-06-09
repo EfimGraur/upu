@@ -15,7 +15,7 @@
 <body>
   <div>
     <div id="form_wrapper">
-      <form method="post" action="/action_page.php" id="registratura">
+      <form method="post" action="/addFirstLevelForm" id="registratura">
         <div id="headWrapper">
           <div class="headCol" id="dataOra">
             <div class="dataOra">
