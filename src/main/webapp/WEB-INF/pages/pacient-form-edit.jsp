@@ -13,8 +13,8 @@
 <body>
 <h1>Pacient Form</h1>
 
-<h1>Add First Level Form</h1>
-<form:form method="post" action="save">
+<h1>Edit FirstLevelForm</h1>
+<form:form method="POST" action="admin/addFirstLevelForm">
     <table >
         <tr>
             <td>FirstName : </td>
@@ -23,6 +23,11 @@
         <tr>
             <td>LastName :</td>
             <td><form:input path="lastName" /></td>
+        </tr>
+
+        <tr>
+            <td> </td>
+            <td><input type="submit" value="Edit Save" /></td>
         </tr>
     </table>
 </form:form>

@@ -13,19 +13,28 @@
 <body>
 <h1>Pacient Form</h1>
 
-<h1>Add First Level Form</h1>
-<form:form method="post" action="save">
-    <table >
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<html>
+<head>
+    <title>First Level Form View</title>
+</head>
+<body>
+
+<h2>Submitted FirstLevelForm Informations</h2>
+
+<h1>FirstLevelForm List</h1>
+<table border="2" width="70%" cellpadding="2">
+    <tr><th>FistName</th><th>LastName</th><th>Edit</th><th>Delete</th></tr>
+    <c:forEach var="fistLevelForm" items="${list}">
         <tr>
-            <td>FirstName : </td>
-            <td><form:input path="fistName"  /></td>
+            <td>${fistLevelForm.fistName}</td>
+            <td>${fistLevelForm.lastName}</td>
         </tr>
-        <tr>
-            <td>LastName :</td>
-            <td><form:input path="lastName" /></td>
-        </tr>
-    </table>
-</form:form>
+    </c:forEach>
+</table>
+<br/>
+
+
 
 <p>
 <a href="<c:url value="/j_spring_security_logout"/>" >Logout</a> <br/>
