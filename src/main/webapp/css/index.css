@@ -19,12 +19,22 @@ body{
     height: 100vh;
 }
 
+h1 {
+    margin: 15px 0;
+    color: #417E80;
+}
+
 #form_wrapper {
     margin: 0 auto;
      border-collapse: collapse;
 }
 #submitButton{
-    width: 100%;
+    width: 50%;
+        background-color: #003133;
+        padding: 5px 0;
+        color: #fff;
+        margin-top: 5px;
+        border-radius: 5px;
 }
 
 #loginWrapper {
@@ -33,6 +43,135 @@ body{
       left: 50%;
       /* bring your own prefixes */
       transform: translate(-50%, -50%);
+}
+
+input {
+    outline: none;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #67989A;
+}
+
+input[type="text"],
+ input[type="password"]{
+    padding: 5px 0;
+}
+
+#form_wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  border: 1px solid rgb(0, 174, 255);
+  border-radius: 5px;
+  padding: 10px;
+  height: calc(100vh - 10vh);
+}
+
+#headWrapper {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+input {
+  padding: 5px 0;
+}
+
+.headCol {
+  display: table-cell;
+}
+
+#dataOra input[type="number"] {
+  width: 40px;
+}
+
+#dataOra {
+  display: table;
+  text-align: center;
+  table-layout: fixed;
+  padding: 0 10px;
+}
+
+.dataOra {
+  display: table-cell;
+}
+
+#title {
+  text-align: center;
+  width: 100%;
+}
+
+#sex {
+  position: fixed;
+  right: 0;
+  padding: 0 10px;
+}
+
+input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+#numeVarsta {
+  width: 100%;
+  display: flex;
+}
+
+#nume,
+#prenume {
+  width: 100%;
+}
+
+input[type="text"] {
+  width: 100%;
+}
+
+input[name="varsta"] {
+  width: 60px;
+}
+
+#schema {
+  width: 100%;
+  position: relative;
+}
+
+#schema img {
+  position: absolute;
+  width: 100%;
+  right: 0;
+}
+
+#submitFormRegistratura {
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.stariSimptome {
+  display: table-cell;
+}
+
+#infoSchema {
+  display: table;
+  width: 100%;
+}
+
+#buttonBody {
+  position: fixed;
+  display: grid;
+  transform: translate(-52%, 0%);
+  top: 45%;
+  left: 50%;
+}
+
+#buttonBody button {
+  margin-top: 5px;
+  padding: 6px 5px;
 }
 
 

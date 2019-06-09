@@ -14,7 +14,7 @@
 </head>
 <body>
 <div id="loginWrapper">
-<h1>UPU User</h1>
+<h1>MED.UPU</h1>
 
 <p>
 <c:if test="${error == true}">
@@ -26,13 +26,13 @@
 <table id="form_wrapper">
 <tbody>
 <tr>
-<td><input type="text" name="j_username" id="j_username"size="30" maxlength="40"  /></td>
+<td><input type="text" name="j_username" id="j_username"size="30" maxlength="40"  placeholder="Utilizator"/></td>
 </tr>
 <tr>
-<td><input type="password" name="j_password" id="j_password" size="30" maxlength="32" /></td>
+<td><input type="password" name="j_password" id="j_password" size="30" maxlength="32" placeholder="Parola"/></td>
 </tr>
 <tr>
-<td><input id="submitButton" type="submit" value="Login" /></td>
+<td><input id="submitButton" type="submit" value="Autentificare" /></td>
 </tr>
 </tbody>
 </table>
